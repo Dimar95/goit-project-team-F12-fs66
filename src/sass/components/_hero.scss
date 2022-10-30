@@ -1,0 +1,124 @@
+.hero {
+  // height: 704px;
+  // display: flex;
+  @include breakpoint(desktop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.hero__title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+
+  font-size: 28px;
+  line-height: 1.18;
+  margin-bottom: 28px;
+
+  @include breakpoint(tablet) {
+    font-size: 42px;
+    line-height: 1.2;
+  }
+
+  @include breakpoint(desktop) {
+    font-size: 48px;
+    line-height: 1.2;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    margin-bottom: 44px;
+    width: 537px;
+  }
+}
+
+.hero__text {
+  margin-bottom: 40px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 502px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 28px;
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    width: 336px;
+  }
+}
+
+.hero__button {
+  transition: background-color $transition-duration $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: #b5ff00;
+  }
+}
+
+.hero__slider {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    display: flex;
+    margin-left: 372px;
+    margin-top: -232px;
+  }
+}
+
+.slider__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  height: 320px;
+
+  background-image: url(/src/images/hero/yellow-border320.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include breakpoint(desktop) {
+    width: 580px;
+    height: 580px;
+
+    background-image: url(/src/images/hero/yellow-border580.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.slider__control {
+  border: none;
+  border-radius: 0;
+  background-color: $background-main;
+  width: 28px;
+  height: 34px;
+
+  &:hover svg {
+    fill: #7eb101;
+  }
+  &:focus svg {
+    fill: #7eb101;
+  }
+
+  @include breakpoint(desktop) {
+    width: 40px;
+    height: 48px;
+  }
+}
+
+.slider__svg {
+  fill: currentColor;
+
+  transition: fill $transition-duration $timing-function;
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    width: 12px;
+    height: 21px;
+  }
+}
