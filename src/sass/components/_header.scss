@@ -1,0 +1,33 @@
+.header {
+  background-color: $header-footer-bg-color;
+  margin-bottom: 60px;
+
+  &__container {
+    display: flex;
+    height: 72px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav__menu {
+    display: none;
+
+    @include breakpoint(tablet) {
+      display: inline-block;
+    }
+
+    .nav-list {
+      display: flex;
+    }
+  }
+}
+
+.button-menu {
+  background-color: transparent;
+  width: 28px;
+  height: 28px;
+
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}
