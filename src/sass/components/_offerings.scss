@@ -3,7 +3,7 @@
     width: 100%;
     max-width: 1280px;
     height: 1050px;
-    padding-top: 83px;
+    padding-top: 41px;
     padding-bottom: 60px;
     margin-left: auto;
     margin-right: auto;
@@ -20,6 +20,10 @@
         background-image: url(../images/offerings/bgofferingsmob.png);
     }
 
+    @media screen and (min-width:767px) {
+        background-size: contain;
+    } 
+        
    
     @include breakpoint(tablet) {
         height: 1140px;
@@ -52,8 +56,6 @@
 .offerings {
     
     @include breakpoint(desktop)  {
-        padding-left: 16px;
-        padding-right: 16px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -116,36 +118,33 @@
 
 .offerings-descr {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    
 
     @include breakpoint(tablet) {
         width: 620px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
         justify-content: start;
     }
 
     @include breakpoint(desktop) {
         width: 573px;
         margin-top: 83px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
         justify-content: start;
     }
 
     &__title {
         margin: 0 0 28px 0;
-        font-family: 'Roboto';
         font-size: 28px;
         line-height: 1.18;
         text-align: start;
         max-width: none;
 
-        @include breakpoint(mobile) {
-            max-width: 280px;
-
-        }
-
-        @include breakpoint(tablet) {
+         @include breakpoint(tablet) {
             margin: 0 0 20px 0;
             max-width: 526px;
             font-size: 42px;
@@ -158,21 +157,17 @@
     &__subtitle {
         margin: 0 0 28px 0;
         text-align: start;
-        font-family: 'Roboto';
         font-weight: 400;
         font-size: 14px;
         line-height: 1.14;
         color: $font-color;
+        font-weight: 400;
 
-        @include breakpoint(mobile) {
-            max-width: 272px;
-
-        }
 
         @include breakpoint(tablet) {
-            max-width: 500px;
+            max-width: 522px;
             font-size: 16px;
-            line-height: 1.19;
+            line-height: 1.18;
             margin-bottom: 40px;
 
         }
@@ -181,11 +176,7 @@
     &__list {
         width: 100%;
         text-align: start;
-
-        @include breakpoint(mobile) {
-            width: 280px;
-
-        }
+        margin: 0 0 28px 0;
 
         @include breakpoint(tablet) {
             width: 620px;
@@ -195,7 +186,7 @@
             margin-bottom: 40px;
 
             :not(:last-child) {
-                margin-right: 116px;
+                margin: 0 116px 0 0;
             }
 
         }
@@ -204,7 +195,7 @@
             margin-bottom: 32px;
 
             :not(:last-child) {
-                margin-right: 67px;
+                margin: 0 67px 0 0;
             }
 
         }
@@ -214,10 +205,12 @@
 
     &__item {
         width: 100%;
-
-        @include breakpoint(mobile) {
-            width: 252px;
-
+        
+        &--delivery {
+            @media screen and (max-width: 768px) {
+                margin-bottom: 28px;
+            }
+                           
         }
 
         &--delivery::before {
@@ -240,17 +233,16 @@
     }
 
     &__info {
-        margin-bottom: 16px;
-        font-family: 'Roboto';
+        width: 100%;
         font-weight: 700;
         font-size: 18px;
         line-height: 1.17;
         color: $font-color;
     }
 
-    .offerings-descr__text {
-        font-family: 'Roboto';
-        font-weight: 400;
+    &__text {
+        width: 100%;
+        margin-top: 16px;
         font-size: 14px;
         line-height: 1.14;
         color: $font-color;
@@ -271,11 +263,11 @@
     }
 
     &__button {
-        font-family: 'Roboto';
         font-size: 13px;
         line-height: 150%;
         color: #2C2C2C;
         min-width: 106px;
+        font-weight: 500;
         height: 40px;
         padding: 9px 20px;
         background: #FFFFFF;
@@ -290,7 +282,7 @@
     }
 
     &__link {
-        font-family: 'Roboto';
+        // font-family: 'Roboto';
         font-style: normal;
         font-size: 14px;
         line-height: 150%;
@@ -309,13 +301,11 @@
     &__svg {
         margin-left: 4px;
         fill: currentColor;
-        transform: rotate(180deg);
-        transition: (all) 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: (fill) 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
         .offerings-btn__link:hover &,
         .offerings-btn__link:active & {
             fill: #7EB101;
-            transform: rotate(0);
         }
 
     }
