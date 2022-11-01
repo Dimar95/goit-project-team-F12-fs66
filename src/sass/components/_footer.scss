@@ -1,0 +1,175 @@
+.footer {
+    background-color: $header-footer-bg-color;
+
+    &__container {
+        background-image: url(/src/images/footer/footer-mobile-bgd.png);
+        background-size: cover;
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        @include breakpoint(tablet) {
+            background-image: url(/src/images/footer/footer-tablet-bgd.png);
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        @include breakpoint(desktop) {
+            background-image: url(/src/images/footer/footer-desctop-bgd.png);
+            background-size: auto;
+            background-position: bottom;
+            background-repeat: no-repeat;
+        }
+    }
+
+}
+
+.footer__nav {
+    @include breakpoint(desktop) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.nav-box {
+    display: flex;
+
+    @include breakpoint(desktop) {
+        align-items: flex-start;
+    }
+}
+
+.nav__menu {
+    margin-left: 81px;
+
+    @include breakpoint(tablet) {
+        margin-left: 110px;
+        display: flex;
+        align-items: center;
+    }
+
+    @include breakpoint(desktop) {
+        margin-left: 148px;
+    }
+
+}
+
+.nav-list {
+
+    &__link {
+        color: #000000;
+        font-size: 14px;
+        line-height: 1.14;
+    }
+
+    &__link:hover,
+    &__link:focus,
+    &__link:active {
+        color: $button-green;
+        text-decoration: underline;
+    }
+
+    @include breakpoint(tablet) {
+        display: flex;
+    }
+
+    @include breakpoint(desktop) {
+        padding-top: 18px;
+    }
+}
+
+.nav-list__item {
+    padding-bottom: 20px;
+
+    @include breakpoint(tablet) {
+        padding-bottom: 0px;
+        margin-left: 28px;
+
+        &:first-child {
+            margin-left: 0px;
+        }
+    }
+}
+
+.subscribe-form {
+    padding-top: 20px;
+
+    @include breakpoint(desktop) {
+        padding-top: 0;
+    }
+}
+
+
+.footer-input {
+    width: 279px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include breakpoint(tablet) {
+        margin-left: 0;
+        margin-right: 13px;
+    }
+}
+
+.subscribe-form__item {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.footer-button {
+    background-color: transparent;
+    border: 0.854167px solid #7EB101;
+
+    @include breakpoint(tablet) {
+        margin-left: 0;
+    }
+}
+
+.subscribe-form__policy {
+    margin-top: 20px;
+    font-size: 10px;
+
+    @include breakpoint(tablet) {
+        margin-top: 12px;
+        font-size: 12px;
+    }
+}
+
+
+.footer__info {
+    margin-top: 62px;
+    font-size: 10px;
+    text-align: center;
+
+    @include breakpoint(tablet) {
+        font-size: 12px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 100px;
+    }
+
+    @include breakpoint(desktop) {
+        margin-top: 80px;
+    }
+}
+
+.info-list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 0;
+    }
+}
+
+.subscribe-form__link {
+    color: #7EB101;
+    text-decoration: underline;
+}
+
+.info-list__item {
+    @include breakpoint(tablet) {
+        padding-right: 20px;
+    }
+}

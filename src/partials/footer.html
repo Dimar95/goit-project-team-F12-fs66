@@ -1,35 +1,62 @@
 <footer class="footer">
-  <div class="footer__nav container">
-    <div class="nav">
-      <include src="./partials/logo.html"></include>
-      <include src="./partials/navigation.html"></include>
-    </div>
-    <div class="subscribe">
+  <div class="footer__container container">
+    <div class="footer__nav">
+      <div class="nav-box">
+        <include src="./partials/logo.html"></include>
+        <nav class="nav__menu">
+          <ul class="nav-list">
+            <li class="nav-list__item">
+              <a href="#home" class="nav-list__link">Home</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#about" class="nav-list__link">About</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#service" class="nav-list__link">Service</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#menu" class="nav-list__link">Menu</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#contact" class="nav-list__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
       <form class="subscribe-form">
         <p class="subscribe-form__item">Subscribe</p>
         <label class="subscribe-form__box">
           <input
-            class="subscribe-form__input"
+            class="subscribe-form__input footer-input"
             type="email"
             name="subscribe"
             placeholder="Enter your e-mail"
           />
-          <button class="subscribe-form__button" type="submit">
-            Subscribe
-          </button>
+          <div class="subscribe-form__btn">
+            <button class="subscribe-form__button footer-button" type="submit">
+              Subscribe
+            </button>
+          </div>
         </label>
         <p class="subscribe-form__policy">
-          By subscribing you agree to with our <a href="">Privacy Policy</a>
+          By subscribing you agree to with our
+          <a class="subscribe-form__link" href="">Privacy Policy</a>
         </p>
       </form>
     </div>
-  </div>
-  <div class="footer__info">
-    <ul class="info-list">
-      <li class="info-list__item"><a href="">Privacy Policy</a></li>
-      <li class="info-list__item"><a href="">Terms of Service</a></li>
-      <li class="info-list__item"><a href="">Cookies Settings</a></li>
-    </ul>
-    <p class="copyright">2022 FoodSta. All right reserved.</p>
+    <div class="footer__info">
+      <ul class="info-list">
+        <li class="info-list__item">
+          <a class="subscribe-form__link" href="">Privacy Policy</a>
+        </li>
+        <li class="info-list__item">
+          <a class="subscribe-form__link" href="">Terms of Service</a>
+        </li>
+        <li class="info-list__item">
+          <a class="subscribe-form__link" href="">Cookies Settings</a>
+        </li>
+      </ul>
+      <p class="copyright">2022 FoodSta. All right reserved.</p>
+    </div>
   </div>
 </footer>
