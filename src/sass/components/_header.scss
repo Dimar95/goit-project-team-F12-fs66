@@ -56,6 +56,7 @@
   background-color: transparent;
   width: 28px;
   height: 28px;
+  border: none;
 
   @include breakpoint(tablet) {
     display: none;
