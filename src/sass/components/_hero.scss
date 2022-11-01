@@ -1,21 +1,40 @@
 .hero {
-  // height: 704px;
-  // display: flex;
+  padding-top: 60px;
+  padding-bottom: 50px;
+
+  // @media screen and (max-width: 767px) {
+  //   padding-top: 60px;
+  //   padding-bottom: 50px;
+  // }
+
   @include breakpoint(desktop) {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 14px;
   }
+
+  // .hero__wrapper {
+  //   @media screen and (max-width: 767px) {
+  //     display: flex;
+  //     flex-direction: column;
+  //     justify-content: center;
+  //     align-items: center;
+  //   }
+  // }
 }
 .hero__title {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-
-  font-size: 28px;
-  line-height: 1.18;
   margin-bottom: 28px;
 
+  font-family: 'Roboto';
+  text-align: start;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+
+  @media screen and (max-width: 767px) {
+    max-width: 280px;
+  }
   @include breakpoint(tablet) {
     font-size: 42px;
     line-height: 1.2;
@@ -24,6 +43,7 @@
   @include breakpoint(desktop) {
     font-size: 48px;
     line-height: 1.2;
+    width: 502px;
   }
 
   @media screen and (min-width: $tablet) and (max-width: 1279px) {
@@ -35,18 +55,21 @@
 .hero__text {
   margin-bottom: 40px;
 
-  font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
-  max-width: 502px;
-
   @media screen and (max-width: 767px) {
     margin-bottom: 28px;
     font-size: 14px;
+    width: 266px;
   }
 
   @media screen and (min-width: $tablet) and (max-width: 1279px) {
     width: 336px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    height: 69px;
+    width: 502px;
   }
 }
 
@@ -57,6 +80,10 @@
   &:focus {
     background-color: #b5ff00;
   }
+
+  // @media screen and (max-width: 767px) {
+  //   align-self: flex-start;
+  // }
 }
 
 .hero__slider {
@@ -95,10 +122,11 @@
 
 .slider__control {
   border: none;
-  border-radius: 0;
   background-color: $background-main;
   width: 28px;
   height: 34px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
 
   &:hover svg {
     fill: #7eb101;
