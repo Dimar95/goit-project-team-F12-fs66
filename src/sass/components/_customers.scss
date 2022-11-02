@@ -3,17 +3,20 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  height: 769px;
 
   @include breakpoint(mobile) {
     background-image: url(../images/customers/background-mob-480.png);
   }
 
   @include breakpoint(tablet) {
+    height: 554px;
     padding-bottom: 120px;
     background-image: url(../images/customers/background-tab.png);
   }
 
   @include breakpoint(desktop) {
+    height: 647px;
     background-image: url(../images/customers/background-desk.png);
   }
 }
