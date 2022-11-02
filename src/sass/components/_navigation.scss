@@ -1,5 +1,7 @@
 .nav-list {
-  display: flex;
+  @include breakpoint(tablet) {
+    display: flex;
+  }
 
   &__item:not(:last-child) {
     margin-right: 28px;
