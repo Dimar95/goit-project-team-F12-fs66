@@ -1,0 +1,21 @@
+.nav-list {
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 28px;
+  }
+
+  &__link {
+    color: $font-color;
+    font-size: 14px;
+    line-height: 1.14;
+    padding: 28px 0;
+  }
+
+  &__link:hover,
+  &__link:focus,
+  &__link:active {
+    color: $button-green;
+    text-decoration: underline;
+  }
+}
