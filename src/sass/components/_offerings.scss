@@ -8,7 +8,7 @@
     margin-left: auto;
     margin-right: auto;
     background-color: #ffffff;
-    background-image: url(../images/offerings/bgofferingsmob.png);
+    background-image: url(../images/offerings/bgmob.svg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,13 +17,15 @@
         (-webkit-min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
-        background-image: url(../images/offerings/bgofferingsmob.png);
+        background-image: url(../images/offerings/bgmob.svg);
     }
 
-    @media screen and (min-width: 768px) {
+    @include breakpoint(mobile) {
         background-size: contain;
-    } 
+        background-image: url(../images/offerings/bgmob.svg);
         
+    }
+           
    
     @include breakpoint(tablet) {
         height: 1140px;
@@ -101,7 +103,7 @@
     }
 
     &__image {
-        display: block;
+        // display: block;
         width: 100%;
 
     }
@@ -273,6 +275,7 @@
         background: #FFFFFF;
         border: 2px solid #7EB101;
         border-radius: 30px;
+        cursor: pointer;
         transition: (border) 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
         &:hover,
