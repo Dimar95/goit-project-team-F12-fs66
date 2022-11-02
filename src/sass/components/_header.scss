@@ -2,48 +2,22 @@
   background-color: $header-footer-bg-color;
 
   &__container {
-    position: relative;
     display: flex;
     height: 72px;
     justify-content: space-between;
     align-items: center;
   }
 
+  .nav__menu {
+    display: none;
+
+    @include breakpoint(tablet) {
+      display: inline-block;
+    }
+  }
+
   .nav__wrapper {
-    
-    @media screen and (max-width: 767px) {
-      position: absolute;
-      top: 50px;
-      right: 20px;
-      width: 130px;
-      height: 255px;
-      background: $header-footer-bg-color;      
-      box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
-      border-radius: 30px 0px 30px 30px;
-      z-index: 999;
-      overflow: hidden;
-
-      transform: translateX(100%);
-      visibility: hidden;
-    
-      transition: transform $transition-duration $timing-function,
-        visibility $transition-duration $timing-function;
-    
-      &.is-open {
-        transform: translateX(0);
-        visibility: visible;
-      }
-    }
-    
-    display: block;
-
-    & .hero__button {
-      display: none;
-
-      @include breakpoint(tablet) {
-        display: block;
-      }
-    }
+    display: none;
 
     @include breakpoint(tablet) {
       display: flex;
@@ -51,18 +25,16 @@
     }
   }
 
-  .nav__menu {
-    display: block;
+  .nav-list {
+    display: flex;
 
     @include breakpoint(tablet) {
-      display: inline-block;
+      margin-right: 30px;
     }
   }
 }
 
-.button-menu,
-.button-menu-close {
-  display: block;
+.button-menu {
   background-color: transparent;
   width: 28px;
   height: 28px;
@@ -71,10 +43,4 @@
   @include breakpoint(tablet) {
     display: none;
   }
-}
-
-.button-menu-close {
-  position: absolute;
-  top: 11px;
-  right: 11px;
 }

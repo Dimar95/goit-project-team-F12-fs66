@@ -23,6 +23,7 @@
   //   }
   // }
 }
+
 .hero__title {
   margin-bottom: 28px;
 
@@ -35,6 +36,7 @@
   @media screen and (max-width: 767px) {
     max-width: 280px;
   }
+
   @include breakpoint(tablet) {
     font-size: 42px;
     line-height: 1.2;
@@ -57,6 +59,7 @@
 
   font-size: 16px;
   line-height: 1.5;
+
   @media screen and (max-width: 767px) {
     margin-bottom: 28px;
     font-size: 14px;
@@ -90,6 +93,7 @@
   @media screen and (max-width: 767px) {
     display: none;
   }
+
   @media screen and (min-width: $tablet) and (max-width: 1279px) {
     display: flex;
     margin-left: 372px;
@@ -131,6 +135,7 @@
   &:hover svg {
     fill: #7eb101;
   }
+
   &:focus svg {
     fill: #7eb101;
   }
@@ -145,6 +150,7 @@
   fill: currentColor;
 
   transition: fill $transition-duration $timing-function;
+
   @media screen and (min-width: $tablet) and (max-width: 1279px) {
     width: 12px;
     height: 21px;
