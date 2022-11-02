@@ -2,7 +2,7 @@
   background-image: url(../images/customers/background-mob-320.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   height: 769px;
 
   @include breakpoint(mobile) {
