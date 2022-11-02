@@ -8,7 +8,7 @@
     margin-left: auto;
     margin-right: auto;
     background-color: #ffffff;
-    background-image: url(../images/offerings/bgofferingsmob.png);
+    background-image: url(../images/offerings/bgmob.svg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,7 +17,7 @@
         (-webkit-min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
-        background-image: url(../images/offerings/bgofferingsmob.png);
+        background-image: url(../images/offerings/bgmob.svg);
     }
 
     @include breakpoint(mobile) {
