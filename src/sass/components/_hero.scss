@@ -1,27 +1,27 @@
 .hero {
   padding-top: 60px;
-  padding-bottom: 50px;
 
-  // @media screen and (max-width: 767px) {
-  //   padding-top: 60px;
-  //   padding-bottom: 50px;
-  // }
+  @media screen and (max-width: 767px) {
+    padding-bottom: 50px;
+  }
 
   @include breakpoint(desktop) {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 14px;
+    padding-bottom: 14px;
   }
 
-  // .hero__wrapper {
-  //   @media screen and (max-width: 767px) {
-  //     display: flex;
-  //     flex-direction: column;
-  //     justify-content: center;
-  //     align-items: center;
-  //   }
-  // }
+  .hero__wrapper {
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      // align-items: center;
+    }
+  }
 }
 
 .hero__title {
@@ -34,7 +34,7 @@
   line-height: 1.18;
 
   @media screen and (max-width: 767px) {
-    max-width: 280px;
+    min-width: 280px;
   }
 
   @include breakpoint(tablet) {
@@ -63,7 +63,8 @@
   @media screen and (max-width: 767px) {
     margin-bottom: 28px;
     font-size: 14px;
-    width: 266px;
+    min-width: 266px;
+    padding-right: 14px;
   }
 
   @media screen and (min-width: $tablet) and (max-width: 1279px) {
@@ -102,6 +103,7 @@
 }
 
 .slider__item {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,8 +129,8 @@
 .slider__control {
   border: none;
   background-color: $background-main;
-  width: 28px;
-  height: 34px;
+  width: 34px;
+  height: 28px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
   border-radius: 8px;
 
@@ -141,12 +143,13 @@
   }
 
   @include breakpoint(desktop) {
-    width: 40px;
-    height: 48px;
+    width: 48px;
+    height: 40px;
   }
 }
 
 .slider__svg {
+  display: block;
   fill: currentColor;
 
   transition: fill $transition-duration $timing-function;
@@ -154,5 +157,49 @@
   @media screen and (min-width: $tablet) and (max-width: 1279px) {
     width: 12px;
     height: 21px;
+  }
+}
+
+.slider__control--prev {
+  position: absolute;
+  top: 50%;
+  right: 92%;
+  transform: translateY(-50%);
+
+  @include breakpoint(desktop) {
+    right: 94%;
+    // margin-left: 13px;
+  }
+}
+
+.slider__svg--prev {
+  margin-left: 9px;
+  @include breakpoint(desktop) {
+    margin-left: 13px;
+  }
+}
+
+.slider__control--next {
+  position: absolute;
+  top: 50%;
+  left: 92%;
+  transform: translateY(-50%);
+
+  @include breakpoint(desktop) {
+    left: 94%;
+  }
+}
+
+.slider__svg--next {
+  margin-left: 13px;
+  @include breakpoint(desktop) {
+    margin-left: 18px;
+  }
+}
+
+.slider__picture {
+  width: 292px;
+  @include breakpoint(desktop) {
+    width: 528px;
   }
 }
