@@ -1,5 +1,5 @@
 .section-subscribe{
-    background-color: #fff;
+    
 
     width: 100%;
     max-width: 1600px;
@@ -13,7 +13,7 @@
     
     
         @media screen and (min-width: 768px) {
-            margin-top: -32px;
+            margin-top: -72px;
             margin-bottom: 100px;
         }
     
@@ -53,7 +53,7 @@
 }
 
 .subscribe-img{
-    @media screen and (min-width: 768px) {
+     @media screen and (min-width: 768px) {
         display: flex;
         justify-content: flex-end;
         }
