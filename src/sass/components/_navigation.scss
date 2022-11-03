@@ -3,8 +3,10 @@
     display: flex;
   }
 
-  &__item:not(:last-child) {
-    margin-right: 28px;
+  .nav-list__item:not(:last-child) {
+    @include breakpoint(tablet) {
+      margin-right: 28px;
+    }
   }
 
   &__link {
