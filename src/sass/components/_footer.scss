@@ -58,6 +58,20 @@
       }
   }
 
+  .nav__menu {
+      margin-left: 81px;
+
+      @include breakpoint(tablet) {
+        margin-left: 110px;
+        display: flex;
+        align-items: center;
+      }
+
+      @include breakpoint(desktop) {
+        margin-left: 148px;
+      }
+  }
+
 }
 
 .footer__nav {
@@ -74,23 +88,6 @@
         align-items: flex-start;
     }
 }
-
-.nav__menu {
-    margin-left: 81px;
-
-    @include breakpoint(tablet) {
-        margin-left: 110px;
-        display: flex;
-        align-items: center;
-    }
-
-    @include breakpoint(desktop) {
-        margin-left: 148px;
-    }
-
-}
-
-
 
 .subscribe-form {
     padding-top: 20px;
