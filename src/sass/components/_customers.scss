@@ -19,7 +19,6 @@
   }
 
   @include breakpoint(desktop) {
-    padding-bottom: 120px;
     height: 647px;
     background-image: url(../images/customers/background-desk.png);
   }
