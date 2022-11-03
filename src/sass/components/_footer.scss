@@ -1,62 +1,64 @@
 .footer {
     background-color: $header-footer-bg-color;
+    box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
 
     &__container {
-        background-image: url(/src/images/footer/footer-mobile-bgd.png);
-        background-size: cover;
+        background-image: url(/src/images/footer/footer-mobile-bgd-left.png), url(/src/images/footer/footer-mobile-bgd-right.png), url(/src/images/footer/footer-mobile-bgd-bottom.png);
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position: 0 132px, right top, bottom;
         padding-top: 60px;
         padding-bottom: 60px;
 
         @include breakpoint(tablet) {
             background-image: url(/src/images/footer/footer-tablet-bgd.png);
+            background-size: cover;
+            background-position: bottom;
             padding-top: 100px;
             padding-bottom: 100px;
         }
 
         @include breakpoint(desktop) {
             background-image: url(/src/images/footer/footer-desctop-bgd.png);
-            background-size: auto;
-            background-position: bottom;
-            background-repeat: no-repeat;
         }
     }
 
     .nav-list {
 
-      &__link {
-          color: #000000;
-          font-size: 14px;
-          line-height: 1.14;
-      }
-  
-      &__link:hover,
-      &__link:focus,
-      &__link:active {
-          color: $button-green;
-          text-decoration: underline;
-      }
-  
-      @include breakpoint(tablet) {
-          display: flex;
-      }
-  
-      @include breakpoint(desktop) {
-          padding-top: 18px;
-      }
-  }
-  
-  .nav-list__item {
-      padding-bottom: 20px;
-  
-      @include breakpoint(tablet) {
-          padding-bottom: 0px;
-          margin-left: 28px;
-  
-          &:first-child {
-              margin-left: 0px;
-          }
-      }
-  }
+        &__link {
+            color: #000000;
+            font-size: 14px;
+            line-height: 1.14;
+        }
+
+        &__link:hover,
+        &__link:focus,
+        &__link:active {
+            color: $button-green;
+            text-decoration: underline;
+        }
+
+        @include breakpoint(tablet) {
+            display: flex;
+        }
+
+        @include breakpoint(desktop) {
+            padding-top: 18px;
+        }
+    }
+
+    .nav-list__item {
+        padding-bottom: 20px;
+
+        @include breakpoint(tablet) {
+            padding-bottom: 0px;
+            margin-left: 28px;
+
+            &:first-child {
+                margin-left: 0px;
+            }
+        }
+    }
 
   .nav__menu {
       margin-left: 81px;
@@ -75,14 +77,24 @@
 }
 
 .footer__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     @include breakpoint(desktop) {
-        display: flex;
+        flex-direction: row;
         justify-content: space-between;
     }
 }
 
 .nav-box {
     display: flex;
+    justify-content: space-between;
+
+
+    @include breakpoint(tablet) {
+        justify-content: start;
+    }
 
     @include breakpoint(desktop) {
         align-items: flex-start;
@@ -92,11 +104,14 @@
 .subscribe-form {
     padding-top: 20px;
 
+    @media screen and (max-width:767px) {
+        max-width: 287px;
+    }
+
     @include breakpoint(desktop) {
         padding-top: 0;
     }
 }
-
 
 .footer-input {
     width: 279px;
@@ -133,7 +148,6 @@
         font-size: 12px;
     }
 }
-
 
 .footer__info {
     margin-top: 62px;
