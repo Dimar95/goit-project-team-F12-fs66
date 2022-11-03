@@ -1,7 +1,7 @@
 .customers__section {
   margin-right: auto;
   margin-left: auto;
-  max-width: 1280px;
+  width: 100%;
   height: 769px;
   background-image: url(../images/customers/background-mob-320.png);
   background-repeat: no-repeat;
@@ -10,15 +10,18 @@
 
   @include breakpoint(mobile) {
     background-image: url(../images/customers/background-mob-480.png);
+    width: 480px;
   }
 
   @include breakpoint(tablet) {
+    width: 768px;
     height: 554px;
     padding-bottom: 60px;
     background-image: url(../images/customers/background-tab.png);
   }
 
   @include breakpoint(desktop) {
+    width: 1280px;
     height: 647px;
     background-image: url(../images/customers/background-desk.png);
   }
