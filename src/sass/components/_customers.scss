@@ -1,0 +1,132 @@
+.customers__section {
+  background-image: url(../images/customers/background-mob-320.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 769px;
+
+  @include breakpoint(mobile) {
+    background-image: url(../images/customers/background-mob-480.png);
+  }
+
+  @include breakpoint(tablet) {
+    height: 554px;
+    padding-bottom: 120px;
+    background-image: url(../images/customers/background-tab.png);
+  }
+
+  @include breakpoint(desktop) {
+    height: 647px;
+    background-image: url(../images/customers/background-desk.png);
+  }
+}
+
+.customers {
+  color: $font-color;
+}
+
+.customers__title {
+  margin-bottom: 20px;
+  font-size: 28px;
+  line-height: 33px;
+
+  @include breakpoint(tablet) {
+    font-size: 42px;
+    line-height: 49px;
+  }
+}
+
+.customers__descr {
+  margin-bottom: 32px;
+  font-size: 14px;
+  line-height: 16px;
+
+  @include breakpoint(tablet) {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+.comments-list {
+  @include breakpoint(tablet) {
+    display: flex;
+  }
+}
+
+.comments-list__item {
+  padding: 8px;
+  width: 100%;
+  background-color: $header-footer-bg-color;
+  border-radius: 0px 30px 30px 30px;
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  @include breakpoint(mobile) {
+    width: 440px;
+  }
+
+  @include breakpoint(tablet) {
+    padding: 12px;
+    width: 336px;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 32px;
+    }
+  }
+
+  @include breakpoint(desktop) {
+    width: 501px;
+
+    &:not(:last-child) {
+      margin-right: 139px;
+    }
+  }
+}
+
+.ranking {
+  margin-bottom: 28px;
+}
+
+.comment-list__text {
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+
+  @include breakpoint(tablet) {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
+.customer {
+  display: flex;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.customer__image {
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.customer__name {
+  margin-bottom: 2px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.customer__descr {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.customer__details {
+  display: block;
+  padding-right: 16px;
+  border-right: 0.854167px solid #7eb101;
+}

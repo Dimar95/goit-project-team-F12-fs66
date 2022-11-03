@@ -21,6 +21,43 @@
         }
     }
 
+    .nav-list {
+
+      &__link {
+          color: #000000;
+          font-size: 14px;
+          line-height: 1.14;
+      }
+  
+      &__link:hover,
+      &__link:focus,
+      &__link:active {
+          color: $button-green;
+          text-decoration: underline;
+      }
+  
+      @include breakpoint(tablet) {
+          display: flex;
+      }
+  
+      @include breakpoint(desktop) {
+          padding-top: 18px;
+      }
+  }
+  
+  .nav-list__item {
+      padding-bottom: 20px;
+  
+      @include breakpoint(tablet) {
+          padding-bottom: 0px;
+          margin-left: 28px;
+  
+          &:first-child {
+              margin-left: 0px;
+          }
+      }
+  }
+
 }
 
 .footer__nav {
@@ -53,42 +90,7 @@
 
 }
 
-.nav-list {
 
-    &__link {
-        color: #000000;
-        font-size: 14px;
-        line-height: 1.14;
-    }
-
-    &__link:hover,
-    &__link:focus,
-    &__link:active {
-        color: $button-green;
-        text-decoration: underline;
-    }
-
-    @include breakpoint(tablet) {
-        display: flex;
-    }
-
-    @include breakpoint(desktop) {
-        padding-top: 18px;
-    }
-}
-
-.nav-list__item {
-    padding-bottom: 20px;
-
-    @include breakpoint(tablet) {
-        padding-bottom: 0px;
-        margin-left: 28px;
-
-        &:first-child {
-            margin-left: 0px;
-        }
-    }
-}
 
 .subscribe-form {
     padding-top: 20px;
