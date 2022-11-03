@@ -1,9 +1,12 @@
 .footer {
     background-color: $header-footer-bg-color;
+    box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
 
     &__container {
         background-image: url(/src/images/footer/footer-mobile-bgd.png);
         background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
         padding-top: 60px;
         padding-bottom: 60px;
 
@@ -16,47 +19,45 @@
         @include breakpoint(desktop) {
             background-image: url(/src/images/footer/footer-desctop-bgd.png);
             background-size: auto;
-            background-position: bottom;
-            background-repeat: no-repeat;
         }
     }
 
     .nav-list {
 
-      &__link {
-          color: #000000;
-          font-size: 14px;
-          line-height: 1.14;
-      }
-  
-      &__link:hover,
-      &__link:focus,
-      &__link:active {
-          color: $button-green;
-          text-decoration: underline;
-      }
-  
-      @include breakpoint(tablet) {
-          display: flex;
-      }
-  
-      @include breakpoint(desktop) {
-          padding-top: 18px;
-      }
-  }
-  
-  .nav-list__item {
-      padding-bottom: 20px;
-  
-      @include breakpoint(tablet) {
-          padding-bottom: 0px;
-          margin-left: 28px;
-  
-          &:first-child {
-              margin-left: 0px;
-          }
-      }
-  }
+        &__link {
+            color: #000000;
+            font-size: 14px;
+            line-height: 1.14;
+        }
+
+        &__link:hover,
+        &__link:focus,
+        &__link:active {
+            color: $button-green;
+            text-decoration: underline;
+        }
+
+        @include breakpoint(tablet) {
+            display: flex;
+        }
+
+        @include breakpoint(desktop) {
+            padding-top: 18px;
+        }
+    }
+
+    .nav-list__item {
+        padding-bottom: 20px;
+
+        @include breakpoint(tablet) {
+            padding-bottom: 0px;
+            margin-left: 28px;
+
+            &:first-child {
+                margin-left: 0px;
+            }
+        }
+    }
 
 }
 
