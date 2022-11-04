@@ -51,7 +51,7 @@
     }
 
     &__item {
-
+        cursor: pointer;
         @media screen and (max-width: 767px) {
             &:nth-child(n+4) {
                 display: none;
