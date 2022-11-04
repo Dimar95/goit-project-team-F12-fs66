@@ -1,0 +1,155 @@
+@import '../../../node_modules/slick-carousel/slick/slick.scss';
+
+$color: #2c2c2c;
+
+.carousel {
+  width: 580px;
+  height: 580px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    margin-left: 372px;
+    margin-top: -232px;
+    width: 320px;
+    height: 320px;
+  }
+}
+
+.carousel__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  height: 320px;
+
+  background-image: url(/src/images/hero/yellow-border320.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include breakpoint(desktop) {
+    width: 580px;
+    height: 580px;
+
+    background-image: url(/src/images/hero/yellow-border580.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+.carousel__img {
+  margin: 15px auto;
+  width: 292px;
+  @include breakpoint(desktop) {
+    width: 528px;
+    margin: 30px auto;
+  }
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  border: none;
+  background-color: $background-main;
+  width: 34px;
+  height: 28px;
+  @include breakpoint(desktop) {
+    width: 48px;
+    height: 40px;
+  }
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  padding: 0;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.slick-prev {
+  top: 50%;
+  right: 92%;
+  transform: translateY(-50%);
+  z-index: 1;
+  @include breakpoint(desktop) {
+    right: 94%;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='30' fill='none'%3E%3Cpath fill='%232C2C2C' d='M.45 15.905 14.383 29.18a1.25 1.25 0 0 0 1.725 0l.015-.015a1.15 1.15 0 0 0 0-1.668l-13.12-12.5 13.12-12.494a1.15 1.15 0 0 0 0-1.668L16.108.82a1.25 1.25 0 0 0-1.725 0L.45 14.095a1.251 1.251 0 0 0 0 1.81Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 11.49px 20.34px;
+    background-position: 5.14px 50%;
+    transition: background-image $transition-duration $timing-function;
+
+    @media screen and (min-width: $desktop) {
+      background-size: 16.42px 29.05px;
+      background-position: 7.06px 50%;
+      left: 8px;
+    }
+  }
+}
+.slick-next {
+  top: 50%;
+  left: 92%;
+  transform: translateY(-50%);
+
+  @include breakpoint(desktop) {
+    left: 94%;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 4px;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='30' fill='none'%3E%3Cpath fill='%232C2C2C' d='M16.55 14.095 2.617.82a1.25 1.25 0 0 0-1.725 0L.877.835a1.15 1.15 0 0 0 0 1.667l13.12 12.5L.877 27.497a1.15 1.15 0 0 0 0 1.668l.015.015a1.25 1.25 0 0 0 1.725 0L16.55 15.905a1.251 1.251 0 0 0 0-1.81Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 11.49px 20.34px;
+    background-position: 13.36px 50%;
+
+    transition: background-image $transition-duration $timing-function;
+
+    @media screen and (min-width: $desktop) {
+      background-size: 16.42px 29.05px;
+      background-position: 18.52px 50%;
+      right: 8px;
+    }
+  }
+}
+
+.slick-prev:hover.slick-prev:before,
+.slick-prev:focus.slick-prev:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='30' fill='none'%3E%3Cpath fill='%237EB101' d='M.45 15.905 14.383 29.18a1.25 1.25 0 0 0 1.725 0l.015-.015a1.15 1.15 0 0 0 0-1.668l-13.12-12.5 13.12-12.494a1.15 1.15 0 0 0 0-1.668L16.108.82a1.25 1.25 0 0 0-1.725 0L.45 14.095a1.251 1.251 0 0 0 0 1.81Z'/%3E%3C/svg%3E");
+}
+
+.slick-next:hover.slick-next:before,
+.slick-next:focus.slick-next:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='30' fill='none'%3E%3Cpath fill='%237EB101' d='M16.55 14.095 2.617.82a1.25 1.25 0 0 0-1.725 0L.877.835a1.15 1.15 0 0 0 0 1.667l13.12 12.5L.877 27.497a1.15 1.15 0 0 0 0 1.668l.015.015a1.25 1.25 0 0 0 1.725 0L16.55 15.905a1.251 1.251 0 0 0 0-1.81Z'/%3E%3C/svg%3E");
+}
+
+.slick-prev:hover,
+.slick-next:hover,
+.slick-prev:focus,
+.slick-next:focus {
+  color: currentColor;
+  outline: none;
+  background: $background-main;
+}
+
+.slick-arrow:active {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+}
