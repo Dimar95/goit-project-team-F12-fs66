@@ -1,147 +1,147 @@
 .favorites {
     background-color: $background-main;
 
-& .container {
+    & .container {
 
-    @include breakpoint(desktop) {
-        padding-left: 16px;
-        padding-right: 16px;
-    } 
-}
-
-&__tittle {
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 1.2;
-    color: $font-color;
-    text-align: center;
-    margin-bottom: 20px;
-
-    @include breakpoint(tablet) {
-        font-size: 42px;
+        @include breakpoint(desktop) {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
     }
-}
 
-&__text {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.1;
-    color: $font-color;
-    margin-bottom: 60px;
-    text-align: center;
-
-    @include breakpoint(tablet) {
-        font-size: 16px;
+    &__tittle {
+        font-weight: 700;
+        font-size: 28px;
         line-height: 1.2;
-    }
+        color: $font-color;
+        text-align: center;
+        margin-bottom: 20px;
 
-    @include breakpoint(desktop) {
-        margin-bottom: 40px;
-    }
-}
-
-&__list {
-
-    @include breakpoint(tablet) {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }  
-}
-
-&__item {
-
-    @media screen and (max-width: 767px) {
-        &:nth-child(n+4) {
-            display: none;
+        @include breakpoint(tablet) {
+            font-size: 42px;
         }
     }
 
-    @include breakpoint(tablet) {
-        width: calc((100% - 32px) / 2);
+    &__text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.1;
+        color: $font-color;
+        margin-bottom: 60px;
+        text-align: center;
+
+        @include breakpoint(tablet) {
+            font-size: 16px;
+            line-height: 1.2;
+        }
+
+        @include breakpoint(desktop) {
+            margin-bottom: 40px;
+        }
     }
 
-    @include breakpoint(desktop) {
-        width: calc((100% - 64px) / 3);
+    &__list {
+
+        @include breakpoint(tablet) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
-    &:not(:nth-child(3)) {
+    &__item {
+
         @media screen and (max-width: 767px) {
-            margin-bottom: 20px;
+            &:nth-child(n+4) {
+                display: none;
+            }
         }
-    
-    }
 
-    &:nth-child(odd) {
-        @media screen and (min-width: $tablet) and (max-width: 1279px) {
-            margin-right: 32px;
+        @include breakpoint(tablet) {
+            width: calc((100% - 32px) / 2);
         }
-    }
-
-    &:nth-child(-n+4) {
-        @media screen and (min-width: $tablet) and (max-width: 1279px) {
-            margin-bottom: 32px;
-        }
-    }
-
-    &:nth-child(1),
-    &:nth-child(2),
-    &:nth-child(4),
-    &:nth-child(5) {
 
         @include breakpoint(desktop) {
-            margin-right: 32px;
+            width: calc((100% - 64px) / 3);
+        }
+
+        &:not(:nth-child(3)) {
+            @media screen and (max-width: 767px) {
+                margin-bottom: 20px;
+            }
+
+        }
+
+        &:nth-child(odd) {
+            @media screen and (min-width: $tablet) and (max-width: 1279px) {
+                margin-right: 32px;
+            }
+        }
+
+        &:nth-child(-n+4) {
+            @media screen and (min-width: $tablet) and (max-width: 1279px) {
+                margin-bottom: 32px;
+            }
+        }
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(4),
+        &:nth-child(5) {
+
+            @include breakpoint(desktop) {
+                margin-right: 32px;
+            }
+
+        }
+
+        &:nth-child(-n+3) {
+            @include breakpoint(desktop) {
+                margin-bottom: 32px;
+            }
         }
 
     }
 
-    &:nth-child(-n+3) {
-        @include breakpoint(desktop) {
-            margin-bottom: 32px;
-        }
-    }
+    &__block {
+        position: relative;
+        width: 280px;
+        height: 282px;
+        background-image: url(../images/favorites/Rectangle696.png);
+        background-size: contain;
+        margin: 0 auto;
 
-}
-
-&__block {
-    position: relative;
-    width: 280px;
-    height: 282px;
-    background-image: url(../images/favorites/Rectangle696.png);
-    background-size: contain;
-    margin: 0 auto;
-
-    &:active {
-        background-image: url(../images/favorites/Rectangle695.png);
-    }
-
-    @include breakpoint(tablet) {
-        width: 336px;
-        height: 338px;
-    }
-
-    @include breakpoint(desktop) {
-        width: 395px;
-        height: 397px;
-        
-
-        &:hover {
+        &:active {
             background-image: url(../images/favorites/Rectangle695.png);
         }
-    }   
-}
 
-&__pic {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    width: 315px;
-}
+        @include breakpoint(tablet) {
+            width: 336px;
+            height: 338px;
+        }
 
-&__img {
-   margin: 0 auto; 
-}
+        @include breakpoint(desktop) {
+            width: 395px;
+            height: 397px;
+
+
+            &:hover {
+                background-image: url(../images/favorites/Rectangle695.png);
+            }
+        }
+    }
+
+    &__pic {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        width: 315px;
+    }
+
+    &__img {
+        margin: 0 auto;
+    }
 }
