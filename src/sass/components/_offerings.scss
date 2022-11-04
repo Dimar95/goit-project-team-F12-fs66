@@ -62,7 +62,7 @@
     @include breakpoint(desktop) {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
     }
 
     &__img {
@@ -134,7 +134,7 @@
 
     @include breakpoint(desktop) {
         width: 573px;
-        margin-top: 83px;
+        margin: 83px 51px 0 0;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
